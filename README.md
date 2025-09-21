@@ -2,42 +2,60 @@
 
 ## Overview
 
-A **data structure** is a method of organizing and storing data on a computer so that it can be accessed and manipulated efficiently. Data structures act as "containers" that group data according to specific rules and principles, optimizing processing, searching, and other operations in software systems. Choosing the right data structure is crucial for algorithm performance and the overall efficiency of a system.
+This project focuses on **implementing stacks and queues using static memory (predefined fixed-size arrays)**.  
+All implementations use **arrays with fixed size**.  
+No dynamic memory allocation was used; all memory is **static**.
 
 ---
 
 ## First Structure: **Stacks**
 
 ### Why Stacks?
-- Organize data in a controlled way, with access only to the **top** element.
-- Prevent errors when the **order of execution** matters.
-- Simplify **memory management** and **recursion** handling.
+- Controlled access to the **top** element.  
+- Maintains **execution order**.  
+- Simplifies **memory management** and **recursion handling**.
 
-### Common Uses
-- **Function calls** (recursion)
-- **Undo/Redo** operations in software
-- **Web browsers** (back/forward navigation)
-- **Mathematical expressions** (operator precedence)
-- **Compilers** (syntax parsing)
+### Stack Operations
 
-### Essential Stack Operations
+| Operation      | Description                                   |
+|----------------|-----------------------------------------------|
+| `push`         | Adds an element at the top                     |
+| `pop`          | Removes the element from the top              |
+| `peek` / `top` | Returns the top element without removing it  |
+| `isEmpty`      | Checks if the stack is empty                  |
+| `isFull`       | Checks if the stack has reached maximum size |
+| `size`         | Returns the number of elements in the stack   |
 
-| Operation      | Description                                                   |
-|----------------|---------------------------------------------------------------|
-| `push`         | Adds an element to the top of the stack                      |
-| `pop`          | Removes the element from the top of the stack                |
-| `peek` / `top` | Returns the top element without removing it                  |
-| `isEmpty`      | Checks if the stack has no elements                          |
-| `isFull`       | Checks if the stack has reached its maximum capacity (for fixed stacks) |
-
-### Fixed Stacks (Static Size)
-A **fixed stack** has a predetermined size. Once full, no new elements can be added until some are removed.  
-
-**Example use cases:**
-- Limited-memory embedded systems  
-- Certain algorithm implementations where maximum depth is known in advance  
+All stacks in this project use **fixed arrays (static memory)**.
 
 ---
 
-> This project will explore **stack implementations**, including both **fixed** and **dynamic stacks**, and demonstrate their practical applications in software systems.
+## Second Structure: **Queues**
 
+### Why Queues?
+- Access elements in **first-in, first-out (FIFO)** order.  
+- Useful for **task scheduling**, **message processing**, and **resource management**.
+
+### Queue Operations
+
+| Operation   | Description                         |
+|-------------|-------------------------------------|
+| `enqueue`   | Adds an element at the rear         |
+| `dequeue`   | Removes an element from the front   |
+| `peek` / `front` | Returns the front element        |
+| `isEmpty`   | Checks if the queue is empty        |
+| `isFull`    | Checks if the queue is full         |
+| `list`    | View all queue items       |
+| `size`    | View queue size      |
+
+### Queue Implementations in This Project
+
+- **Without pointers/indices**:  
+  Uses a fixed-size array. Elements are shifted when removing from the front.
+
+- **With pointers/indices**:  
+  Uses a fixed-size array. Front and rear positions are tracked, allowing easier manipulation and optional circular behavior.
+
+> Both queue implementations use **static memory**, the difference is only in **how the positions are managed**.
+
+---
