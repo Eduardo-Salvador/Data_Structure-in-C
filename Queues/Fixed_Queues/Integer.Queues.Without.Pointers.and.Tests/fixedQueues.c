@@ -85,9 +85,13 @@ void firstPair(Queue q){
         for(int i = 0; i <= q.end; i++){
             if(q.array[i] % 2 == 0){
                 firstPair = q.array[i];
+                printf("First Pair is: %d", firstPair);
+                break;
+            } else {
+                printf("No Pair in queue");
             }
         }
-        printf("First Pair is: %d", firstPair);
+        
     } else {
         printf("ERROR: Queue is empty!");
     }

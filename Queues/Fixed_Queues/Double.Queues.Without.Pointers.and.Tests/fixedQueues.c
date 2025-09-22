@@ -53,7 +53,7 @@ Queue dequeue(Queue q){
 
 void peek(Queue q){
     if(!isEmpty(q)){
-        printf("First element: %f", q.array[0]);
+        printf("First element: %.2f", q.array[0]);
     } else {
         printf("Error: Queue is empty!");
     }
@@ -85,10 +85,13 @@ void firstPair(Queue q){
         for(int i = 0; i <= q.end; i++){
             if((int)q.array[i] % 2 == 0){
                 firstPair = q.array[i];
+                printf("First Pair is: %.2f", firstPair);
                 break;
+            } else {
+                printf("No pair in queue.");
             }
         }
-        printf("First Pair is: %.2f", firstPair);
+        
     } else {
         printf("ERROR: Queue is empty!");
     }
