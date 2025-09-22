@@ -12,7 +12,7 @@ int main(){
 		printf("\n\nMENU");
         printf("\n1. Initialize");
         printf("\n2. Insert");
-        printf("\n3. Remover");
+        printf("\n3. Remove");
         printf("\n4. Print");
         printf("\n5. First Element");
         printf("\n6. Queue size");
@@ -31,8 +31,8 @@ int main(){
 				scanf(" %d", &p.age);
 				printf("Enter the gender (M ou W): ");
 				scanf(" %c", &p.gender);
-				while (p.gender != 'H' && p.gender != 'W') {
-					printf("Incorrect Gender. Enter again (H/W): ");
+				while (p.gender != 'M' && p.gender != 'W') {
+					printf("Incorrect Gender. Enter again (M/W): ");
 					scanf(" %c", &p.gender); 
 				}
 				q = enqueue(q, p);
