@@ -54,7 +54,7 @@ void peek(Queue q){
     if(!isEmpty(q)){
         printf("First person:\n");
         Person p = q.array[0];
-        printf("Name:%s\n", p.name);
+        printf("Name: %s\n", p.name);
         printf("Age: %d\n", p.age);
         printf("Gender: %c\n", p.gender);
     } else {
