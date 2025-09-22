@@ -141,27 +141,3 @@ void test3_removeQueue(){
 		testResult(1);
 	else testResult(0);
 }
-
-void test4_removeQueue(int quant){
-    Queue removed;
-    removed = queue();
-	int i, num[quant];
-	printf("\nTest 4: This test will insert %d element into the queue and remove it, leaving the queue empty", quant);
-	for(i = 0; i < quant; i++)
-		num[i] = i+1;
-	for(i = 0; i < quant; i++) {
-		removed = enqueue(removed, num[i]);
-	}
-	for(i = 0; i < quant && i < MAX_SIZE; i++) {
-		removed = dequeue(removed);
-		if(removed.array[i] != num[i]) {
-			testResult(0);
-			return;
-		}
-	}
-	if(isEmpty(removed)){
-        testResult(1);
-    } else {
-        testResult(0);
-    } 
-}

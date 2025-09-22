@@ -53,12 +53,10 @@ Queue dequeue(Queue q){
 void peek(Queue q){
     if(!isEmpty(q)){
         printf("First person:\n");
-        for(int i = q.start; i <= q.end; i++){
-            Person p = q.array[i];
-            printf("Name:%s\n", p.name);
-            printf("Age: %d\n", p.age);
-            printf("Gender: %c\n", p.gender);
-        }
+        Person p = q.array[0];
+        printf("Name:%s\n", p.name);
+        printf("Age: %d\n", p.age);
+        printf("Gender: %c\n", p.gender);
     } else {
         printf("Error: Queue is empty!");
     }

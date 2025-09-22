@@ -24,4 +24,3 @@ void testResult(int result);
 void test1_emptyQueue(Queue q);
 void test2_insertQueue(Queue q, int quant);
 void test3_removeQueue();
-void test4_removeQueue(int quant);

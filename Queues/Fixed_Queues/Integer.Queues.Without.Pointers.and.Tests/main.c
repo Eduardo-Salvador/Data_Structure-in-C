@@ -11,7 +11,7 @@ int main(){
 		printf("\n\nMENU");
         printf("\n1. Initialize");
         printf("\n2. Insert");
-        printf("\n3. Remover");
+        printf("\n3. Remove");
         printf("\n4. Print");
         printf("\n5. First Element");
         printf("\n6. Queue size");
@@ -61,12 +61,6 @@ int main(){
 				break;
 			case 10:
 				test3_removeQueue();
-				test3_removeQueue(q, 1);
-				test3_removeQueue(q, 2);
-				test3_removeQueue(q, 3);
-				test3_removeQueue(q, 4);
-				test3_removeQueue(q, 5);
-				test3_removeQueue(q, 6);
 				break;
 			case 11:
 				printf("Ending the program...");
