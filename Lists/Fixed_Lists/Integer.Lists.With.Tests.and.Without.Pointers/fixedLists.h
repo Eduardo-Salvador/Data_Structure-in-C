@@ -10,6 +10,7 @@ int isEmpty();
 int isFull();
 void push(int n, int position);
 int pop(int position);
+void removeLarger(int n);
 void printList();
 void issueResult(int result);
 void test1_EmptyList();

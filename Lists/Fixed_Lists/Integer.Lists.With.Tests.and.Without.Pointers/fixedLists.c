@@ -44,7 +44,7 @@ void push(int n, int position){
 
 int pop(int position){
 	int varAux = l.array[position];
-    if(!isEmpty(l)){
+    if(!isEmpty()){
         if (position < 0 || position > l.final){
             printf("Position invalid.");
             return 0;
@@ -68,6 +68,15 @@ void printList(){
     } else{
         printf("List is empty!\n");
     }
+}
+
+void removeLarger(int number){
+	for (int i = 0; i <= l.final; i++){
+		if (number < l.array[i]){
+			pop(i);
+			i = 0;
+		}		
+	}
 }
 
 void issueResult(int result) {
