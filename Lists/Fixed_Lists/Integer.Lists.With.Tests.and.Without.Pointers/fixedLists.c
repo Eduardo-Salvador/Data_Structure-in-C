@@ -59,6 +59,19 @@ int pop(int position){
 	return varAux;
 }
 
+void printOdd(){
+    if(!isEmpty(l)){
+        for(int i = 0; i <= l.final; i++){
+			if (l.array[i] % 2 != 0){
+				printf("%d ", l.array[i]);
+			}
+        }
+		printf("\n");
+    } else{
+        printf("List is empty!\n");
+    }
+}
+
 void printList(){
     if(!isEmpty(l)){
         for(int i = 0; i <= l.final; i++){

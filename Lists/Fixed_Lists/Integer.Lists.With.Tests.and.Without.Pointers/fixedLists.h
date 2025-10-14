@@ -12,6 +12,7 @@ void push(int n, int position);
 int pop(int position);
 void removeLarger(int n);
 void printList();
+void printOdd();
 void issueResult(int result);
 void test1_EmptyList();
 void test2_InsertList(int quant);
