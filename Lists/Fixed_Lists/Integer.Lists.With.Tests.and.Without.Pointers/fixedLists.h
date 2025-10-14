@@ -5,12 +5,12 @@ typedef struct fixedLists {
     int final;
 } List;
 
-List inicializeList();
-int isEmpty(List l);
-int isFull(List l);
-List push(List l, int n, int position);
-List pop(List l, int position);
-void printList(List l);
+void inicializeList();
+int isEmpty();
+int isFull();
+void push(int n, int position);
+int pop(int position);
+void printList();
 void issueResult(int result);
 void test1_EmptyList();
 void test2_InsertList(int quant);

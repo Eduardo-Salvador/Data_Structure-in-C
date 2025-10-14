@@ -19,19 +19,19 @@ int main(){
 		scanf("%i", &option);
         switch(option){
             case 1:
-                l = inicializeList();
+                inicializeList();
                 break; 
             case 2:
                 printf("Enter the number: ");
                 scanf("%d", &number);
                 printf("Enter the position to add: ");
                 scanf("%d", &position);
-                l = push(l, number, position);
+                push(number, --position);
                 break;
             case 3:
                 printf("Which position do you want to remove? ");
                 scanf("%d", &position);
-                l = pop(l, position);
+                pop(--position);
                 break;
             case 4:
                 printList(l);
