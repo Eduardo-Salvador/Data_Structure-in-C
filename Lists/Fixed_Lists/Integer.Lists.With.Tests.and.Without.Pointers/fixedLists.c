@@ -61,7 +61,7 @@ int pop(int position){
 
 void printList(){
     if(!isEmpty(l)){
-        for(int i = 0; i < l.final+1; i++){
+        for(int i = 0; i <= l.final; i++){
             printf("%d ", l.array[i]);
         }
 		printf("\n");

@@ -16,7 +16,7 @@ int main(){
 		printf("\n8. Test 4 - Remove List");
         printf("\n9. Exit");
 		printf("\nEnter the option: ");
-		scanf("%i", &option);
+		scanf("%d", &option);
         switch(option){
             case 1:
                 inicializeList();
