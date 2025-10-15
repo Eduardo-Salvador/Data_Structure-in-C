@@ -11,6 +11,7 @@ No dynamic memory allocation was used; all memory is **static**.
 ## First Structure: **Stacks**
 
 ### Why Stacks?
+- Access elements in **last-in, first-out (LIFO)** order.  
 - Controlled access to the **top** element.  
 - Maintains **execution order**.  
 - Simplifies **memory management** and **recursion handling**.
