@@ -64,7 +64,7 @@ All stacks in this project use **fixed arrays (static memory)**.
 
 ### Why Lists?
 
-- Store multiple elements in **contiguous memory.**
+- Store multiple elements in **continuous memory.**
 - Allow **random access** by index.
 - Suitable when the **maximum size** is known in advance.
 
