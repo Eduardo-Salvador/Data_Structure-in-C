@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project focuses on **implementing stacks and queues using static memory (predefined fixed-size arrays)**.  
+This project focuses on **implementing stacks, queues and lists using static memory (predefined fixed-size arrays)**.  
 All implementations use **arrays with fixed size**.  
 No dynamic memory allocation was used; all memory is **static**.
 
@@ -57,5 +57,38 @@ All stacks in this project use **fixed arrays (static memory)**.
   Uses a fixed-size array. Front and rear positions are tracked, allowing easier manipulation and optional circular behavior.
 
 > Both queue implementations use **static memory**, the difference is only in **how the positions are managed**.
+
+---
+
+## Third Structure: **Lists**
+
+### Why Lists?
+
+- Store multiple elements in **contiguous memory.**
+- Allow **random access** by index.
+- Suitable when the **maximum size** is known in advance.
+
+### List Operations
+
+| Operation   | Description                         |
+|-------------|-------------------------------------|
+| `inicializeList`   | Creates and initializes a new empty list         |
+| `push`   | Inserts an element at a specific position (shifts elements if needed)   |
+| `pop` | Removes an element from a specific position (shifts elements to fill the gap)        |
+| `printList`   | Prints all elements in the list        |
+| `isFull`    | Checks if the queue is full          |
+| `isEmpty`    | Checks if the queue is empty       |
+| `size`    | View queue size        |
+	
+### List Implementations in This Project
+
+- **Without pointers/indices:**
+  Uses a fixed-size array. Elements are shifted to the right when inserting and to the left when removing.
+  Positions are managed manually using a final index.
+- **With pointers/indices:**
+  Uses a fixed-size array. Keeps track of positions using explicit indices or pointers, allowing easier management of insertions and removals.
+  Can optionally support more advanced behaviors like circular insertion.
+
+> This list implementation uses **static memory**, allowing direct access by index but requiring element shifts for insertions and deletions.
 
 ---
