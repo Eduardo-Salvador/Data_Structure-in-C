@@ -14,13 +14,14 @@ typedef struct {
     int initialized;
 } Stack;
 
-void inicializeStack();
 int isFull();
 int isEmpty();
+
+void inicializeStack();
 void push(Disk d);
 void pop();
 void printStack();
 void size();
 void top();
-void clear();
 int search(int position);
+void clear();

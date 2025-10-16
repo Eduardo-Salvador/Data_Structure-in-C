@@ -14,8 +14,8 @@ int main(){
         printf("\n5. Print Stack");
         printf("\n6. Size Stack");
         printf("\n7. Top on Stack");
-		printf("\n8. Clear Stack");
-        printf("\n9. Search");
+        printf("\n8. Search");
+        printf("\n9. Clear Stack");
         printf("\n10. Exit");
 		printf("\nEnter the option: ");
 		scanf("%d", &option);
@@ -48,12 +48,12 @@ int main(){
                 top();
                 break;
             case 8:
-                clear();
-                break;
-            case 9:
                 printf("Enter the position search: ");
                 scanf("%d", &idPosition);
                 search(idPosition);
+                break;
+            case 9:
+                clear();
                 break;
             case 10:
                 printf("Exit...");
