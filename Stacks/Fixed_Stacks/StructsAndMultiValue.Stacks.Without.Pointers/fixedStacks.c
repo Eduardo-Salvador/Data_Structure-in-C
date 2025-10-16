@@ -1,41 +1,65 @@
 #include "fixedStacks.h"
 #include <stdio.h>
 
-Stack initialize() {
-    Stack s;
+Stack s;
+
+void inicializeStack() {
     s.top = -1;
-    return s;
+    s.initialized = 1;
+    printf("Inicialize stack is successfull");
 }
 
-int isFull(Stack s){
-    return s.top == MAX_SIZE - 1;
+int isFull(){
+    if(s.top == MAX_SIZE - 1){
+        return 1;
+    } return 0;
 }
 
-int isEmpty(Stack s){
-    return s.top == -1;
+int isEmpty(){
+    if(s.top == -1){
+        return 1;
+    } return 0;
 }
 
-Stack push(Stack s, Disk d){
-    if(!isFull(s)){
-        s.top++;
-        s.array[s.top] = d;
-    } else {
+void push(Disk d){
+    if (d.initialized == 0) {
+        printf("PUSH ERROR: Disk is not initialized!\n");
+        return;
+    }
+    if (s.initialized == 0){
+        printf("PUSH ERROR: Stack is not initialized!\n");
+        return;
+    }
+    if (isFull()) {
         printf("PUSH ERROR: Stack is full!\n");
+        return;
     }
-    return s;
+    s.top++;
+    d.id = s.top + 1;
+    s.array[s.top] = d;
+    printf("Push successful\n");
 }
 
-Stack pop(Stack s){
-    if(!isEmpty(s)){
-        s.top--;
-    } else {
+void pop(){
+    if (s.initialized == 0){
+        printf("POP ERROR: Stack is not initialized!\n");
+        return;
+    }
+    if (isEmpty()) {
         printf("POP ERROR: Stack is empty!\n");
+        return;
     }
-    return s;
+    Disk d = s.array[s.top];
+    if (d.initialized == 0) {
+        printf("POP ERROR: Disk is not initialized!\n");
+        return;
+    }
+    printf("Stack: %d - %s is removed!", d.id, d.color);
+    s.top--;
 }
 
-void printStack(Stack s){
-    if(!isEmpty(s)){
+void printStack(){
+    if(!isEmpty()){
         printf("STACK:\n");
         for(int i = s.top; i >= 0; i--){
             Disk d = s.array[i];
@@ -49,16 +73,16 @@ void printStack(Stack s){
     }
 }
 
-void size(Stack s){
-    if (!isEmpty(s)) {
+void size(){
+    if (!isEmpty()) {
         printf("Stack lenght: %d\n", s.top+1);
     } else {
         printf("SIZE ERROR: Stack is empty!\n");
     }
 }
 
-void top(Stack s){
-    if (!isEmpty(s)) {
+void top(){
+    if (!isEmpty()) {
         Disk d = s.array[s.top];
         printf("Top value of the stack: \n");
         printf("ID: %d - ", d.id);
@@ -68,4 +92,40 @@ void top(Stack s){
     } else {
         printf("TOP ERROR: Stack is empty!\n");
     }
+}
+
+void clear(){
+    if (!isEmpty()){
+        for (int i = 0; i < MAX_SIZE; i++){
+            Disk diskNull;
+            s.array[i] = diskNull;
+        }
+        s.top = -1;
+    } else {
+        printf("CLEAR ERROR: Stack is empty!\n");
+    }
+}
+
+int search(int idPosition){
+    if (isEmpty()) {
+        printf("ERROR: Stack is empty!\n");
+        return -1;
+    }
+    if (idPosition <= 0 || idPosition > s.top + 1) {
+        printf("ERROR: Invalid position!\n");
+        return -1;
+    }
+    for (int i = 0; i <= s.top; i++) {
+        if (s.array[i].id == s.array[idPosition - 1].id) {
+            Disk d = s.array[i];
+            printf("Disk found at position %d of %d\n", i, s.top);
+            printf("ID: %d - ", d.id);
+            printf("Color: %s - ", d.color);
+            printf("Diameter: %d - ", d.diameter);
+            printf("Weight: %.2f\n", d.weight);
+            return i;
+        }
+    }
+    printf("Disk with ID %d not found in stack.\n", s.array[idPosition - 1].id);
+    return -1;
 }

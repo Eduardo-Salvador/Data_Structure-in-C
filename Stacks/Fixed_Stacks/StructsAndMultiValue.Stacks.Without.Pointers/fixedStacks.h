@@ -5,21 +5,22 @@ typedef struct {
     char color[50];
     int diameter;
     double weight;
+    int initialized;
 } Disk;
 
 typedef struct {
     Disk array[MAX_SIZE];
     int top;
+    int initialized;
 } Stack;
 
-Stack initialize();
-
-int isFull(Stack s);
-int isEmpty(Stack s);
-
-Stack push(Stack s, Disk d);
-Stack pop(Stack s);
-
-void printStack(Stack s);
-void size(Stack s);
-void top(Stack s);
+void inicializeStack();
+int isFull();
+int isEmpty();
+void push(Disk d);
+void pop();
+void printStack();
+void size();
+void top();
+void clear();
+int search(int n);
