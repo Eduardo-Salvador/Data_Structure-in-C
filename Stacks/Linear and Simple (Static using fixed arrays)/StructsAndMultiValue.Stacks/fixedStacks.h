@@ -23,4 +23,4 @@ void printStack();
 void size();
 void top();
 void clear();
-int search(int n);
+int search(int position);
