@@ -22,10 +22,8 @@ int main(){
             case 2:
                 printf("Enter the title: ");
                 scanf(" %[^\n]", film.title);
-                printf("\n");
                 printf("Enter the director: ");
                 scanf(" %[^\n]", film.director);
-                printf("\n");
                 printf("How long is the movie? ");
                 scanf("%d", &film.timeFilm);
                 break;
