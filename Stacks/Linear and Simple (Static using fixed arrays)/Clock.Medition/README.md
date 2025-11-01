@@ -21,7 +21,7 @@ This enables performance analysis as the stack size grows, helping to understand
 | **Pop** | Removes `N` elements from the stack top | **O(1)** per element → **O(N)** total | Clock ticks used |
 | **Print Stack** | Prints all elements currently in the stack | **O(N)** | Clock ticks used |
 
-### 🧠 Big O Explanation
+### Big O Explanation
 - Each individual **push** or **pop** operation takes **constant time** `O(1)`, since it only modifies the top index and accesses an array position.
 - When these operations are performed repeatedly for `N` elements, the total cost becomes **linear** (`O(N)`).
 - The **print** operation iterates through all elements in the stack, thus inherently **O(N)**.
@@ -33,7 +33,7 @@ The goal of this experiment is to **compare actual CPU time (clocks)** with the 
 ## Project Structure
 
 ```
-📦 FixedStack
+FixedStack
 ├── fixedStacks.h   # Header file with stack structure and function prototypes
 ├── fixedStacks.c   # Implementation of stack operations
 └── main.c          # Interactive menu + performance measurement
