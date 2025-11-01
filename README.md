@@ -29,6 +29,10 @@ No dynamic memory allocation was used; all memory is **static**.
 
 All stacks in this project use **fixed arrays (static memory)**.
 
+## A performance meter was implemented in the Sequential Stack.
+To see more about performance and bigO in Stacks, go to: 
+https://github.com/Eduardo-Salvador/Data_Structure-in-C/tree/main/Stacks/Linear%20and%20Simple%20(Static%20using%20fixed%20arrays)/Clock.Medition
+
 ---
 
 ## Second Structure: **Queues**
