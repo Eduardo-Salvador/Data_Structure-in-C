@@ -97,3 +97,5 @@ https://github.com/Eduardo-Salvador/Data_Structure-in-C/tree/main/Stacks/Linear%
 > This list implementation uses **static memory**, allowing direct access by index but requiring element shifts for insertions and deletions.
 
 ---
+
+## **Pointers**
