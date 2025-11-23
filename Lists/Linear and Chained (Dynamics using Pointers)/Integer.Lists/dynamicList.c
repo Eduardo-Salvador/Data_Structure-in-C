@@ -77,3 +77,19 @@ void printList(List *l){
     }
     printf("List empty!\n");
 }
+
+float average(List *l){
+    int counter = 0;
+    int sum = 0;
+    if(l->head != NULL){
+        Node *aux = l->head;
+        while(aux != NULL){
+            sum += aux->data;
+            counter++;
+            aux = aux->next;
+        }
+        return (sum / counter);
+    }
+    printf("List empty!\n");
+    return -1;
+}

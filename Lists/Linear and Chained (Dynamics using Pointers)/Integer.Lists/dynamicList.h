@@ -12,3 +12,4 @@ int isEmpty(List *l);
 void insertAt(List *l, int data, int position);
 int removeAt(List *l, int position);
 void printList(List *l);
+float average(List *l);

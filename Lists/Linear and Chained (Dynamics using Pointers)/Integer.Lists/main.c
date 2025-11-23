@@ -13,7 +13,8 @@ int main(int argc, char *argv[]){
         printf("2. Insert\n");
         printf("3. Remove\n");
         printf("4. Print List\n");
-        printf("5. Exit\n");
+        printf("5. Average List\n");
+        printf("6. Exit\n");
         scanf("%d", &option);
         
         switch(option){
@@ -30,14 +31,17 @@ int main(int argc, char *argv[]){
         case 3:
             printf("Enter the position: ");
             scanf("%d", &position);
-            printf("Number removed: %d", removeAt(l, position));
+            printf("Number removed: %d\n", removeAt(l, position));
             break;
         case 4:
             printList(l);
             break;
         case 5:
+            printf("Average: %.2f\n", average(l));
+            break;
+        case 6:
             printf("\nExit...");
             break;
         }
-    } while (option != 5);
+    } while (option != 6);
 }
