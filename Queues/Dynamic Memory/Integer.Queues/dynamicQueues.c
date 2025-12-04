@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "dynamicQueue.h"
+#include "dynamicQueues.h"
 
 void initializeQueue(Queue *q){
     q->start = NULL;
