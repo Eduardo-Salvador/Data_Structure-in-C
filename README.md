@@ -256,12 +256,15 @@ Implementações focadas na lógica "Último a Entrar, Primeiro a Sair":
 
 The core goal of this repository is to master how data moves in memory:
 
+</div>
 
   * **Pass-by-reference:** Using `List *l` to modify the structure directly.
   * **Memory Release:** Ensuring no memory leaks by using `free(toRemove)`.
   * **Struct Nesting:** Handling pointers to structs inside other structs (e.g., `Node->Contact*`).
 
 -----
+
+<div align="center">
 
 ![Brazil](https://img.shields.io/badge/🇧🇷-Português-green)
 
