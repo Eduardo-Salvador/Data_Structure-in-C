@@ -9,6 +9,9 @@ Explanation of Linear List structures, memory management (Static vs Dynamic), an
 -----
 
 ### Overview:
+
+</div>
+
 **Static Lists (Sequential):** Use a contiguous block of memory. They are fast for access but rigid in size. Inserting in the middle requires a "shift" of all subsequent elements.
 
 **Dynamic Lists (Linked):** Elements (Nodes) are scattered in memory and connected by pointers. They grow as needed using malloc() and free().
@@ -20,6 +23,8 @@ Explanation of Linear List structures, memory management (Static vs Dynamic), an
 **Pointers are Key:** In dynamic lists, each node stores the data and the address (*next) of the next element.
 
 -----
+
+<div align="center">
 
 ### Complexity Comparison:
 

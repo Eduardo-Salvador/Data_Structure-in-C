@@ -43,6 +43,4 @@ Explicação de estruturas LIFO (Last-In, First-Out), gerenciamento de memória 
   * `isEmpty()`: Verifica se a pilha está vazia.
   * `size()`: Retorna a contagem total de elementos na pilha.
 
-\</div\>
-
 -----

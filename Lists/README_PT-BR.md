@@ -9,6 +9,9 @@ Explicação das estruturas de listas lineares, gerenciamento de memória (está
 -----
 
 ### Visão Geral:
+
+</div>
+
 **Listas Estáticas (Sequenciais):** Utilizam um bloco contíguo de memória. São rápidas para acesso, mas rígidas em tamanho. Inserir um elemento no meio requer um "deslocamento" de todos os elementos subsequentes.
 
 **Listas Dinâmicas (Encadeadas):** Os elementos (nós) são dispersos na memória e conectados por ponteiros. Crescem conforme necessário usando malloc() e free().
@@ -20,6 +23,8 @@ Explicação das estruturas de listas lineares, gerenciamento de memória (está
 **Ponteiros são a Chave:** Em listas dinâmicas, cada nó armazena os dados e o endereço (*next) do próximo elemento.
 
 -----
+
+<div align="center">
 
 ### Comparação de Complexidade:
 
