@@ -288,7 +288,7 @@ O objetivo central deste repositório é dominar como os dados se movem na memó
 
 After mastering pointers and manual memory management in C, the project transitions to **Advanced Non-Linear Structures** (Trees, Graphs, Hash Maps) and **High-Level Abstractions** in Java.
 
-> **Note:** The Java portion of this study can be found here: **[Data Structure in Java](https://github.com/Eduardo-Salvador/Data_Strutcture-in-Java)**
+> **Note:** The Java portion of this study can be found here: **[Data Structure in Java](https://github.com/Eduardo-Salvador/Data_Structure-in-Java)**
 
 -----
 
@@ -298,6 +298,6 @@ After mastering pointers and manual memory management in C, the project transiti
 
 Após dominar ponteiros e gerenciamento manual de memória em C, o projeto transiciona para **Estruturas Não-Lineares Avançadas** (Árvores, Grafos, Hash Maps) e **Abstrações de Alto Nível** em Java.
 
-> **Nota:** A parte de Java deste estudo pode ser encontrada aqui: **[Data Structure in Java](https://github.com/Eduardo-Salvador/Data_Strutcture-in-Java)**
+> **Nota:** A parte de Java deste estudo pode ser encontrada aqui: **[Data Structure in Java](https://github.com/Eduardo-Salvador/Data_Structure-in-Java)**
 
 ---
